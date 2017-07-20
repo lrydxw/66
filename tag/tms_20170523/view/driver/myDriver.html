@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="no-cache" http-equiv="pragma">
+	<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+	<title>陆鲸供应链-运力管理-我的司机</title>
+	<!-- css引入 -->
+	<link rel="stylesheet" href="../../css/common/reset-min.css" />
+	<link rel="stylesheet" href="../../css/common/common.css" />
+	<!-- 业务中心-->
+	<link rel="stylesheet" href="../../css/page/trade/trade.css" />
+	<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css" />
+</head>
+
+<body class="body-bg">
+	<!--头部-->
+	<div class="body-top"></div>
+	<!--主体-->
+	<div class="body-main">
+		<!--菜单-->
+		<div class="body-menu" id="tradeMenu"></div>
+		<!--内容-->
+		<div class="body-content">
+                <div class="t-c-title">
+					<span class="t-h2">我的司机</span>
+				</div>
+			<div class="modal-cont">
+					<form  id="searchForm">
+						<div class="input-line goods-input-line">
+							<!--<span class="input-title" style="width:140px;"></span>-->
+							<input type="text" class="t-c-input input-width1" id="keywords" placeholder="姓名\备注\手机号\车牌号" name="keywords" />
+							<span class="input-title input-width5">车长(米)</span>
+							<div class="t-c-input-select t-c-input-select-date">
+								<input type="text" class="t-c-input input-width2 proCarSelAll input-number" data-max="50" data-reg="[^0-9\-\.]" id="carLength2"
+								 placeholder="" name="carlong1" readonly="readonly">
+								<label class="t-c-input-icon"></label>
+							</div>
+							<span class="input-title input-width5">车型</span>
+							<div class="t-c-input-select">
+								<input type="text" class="t-c-input input-width2" init="true" readonly="readonly" />
+								<label class="t-c-input-icon"></label>
+								<ul class="input-option" style="display: none" name="carstruct1">
+								</ul>
+							</div>
+							<span class="t-c-submit history-s-btn" id="searchSubmit">查询</span>
+						</div>
+						<div class="input-line goods-input-line">
+							<span class="t-c-submit history-s-btn" id="addCar">添加司机</span>
+							<span class="t-c-submit history-s-btn" id="batchDriver" style="position:relative"><input type="file" name="excel" id="insertOrder" class="driver-batch">批量添加司机</span>
+								<a href="../../download//%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E5%8F%B8%E6%9C%BA%E6%A8%A1%E6%9D%BF.xlsx" class="driver-batch-download">下载司机信息模板</a>
+						</div>
+					</form>
+					<div class="pagination paginationUp"></div>
+				<table class="t-table" width="946" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th style="width:180px;">司机姓名</th>
+							<th style="width:180px;">手机号</th>
+							<th style="width:160px;">车牌号</th>
+							<th style="width:170px;">车辆信息</th>
+							<!-- <th style="width:170px;">运输状态</th> -->
+							<th style="width:160px;">操作</th>
+						</tr>
+					</thead>
+					<div style="margin: 5px 0">
+						共有司机 <span id="total" style="color:red;"></span>人，未认证司机 <span id="noparty" style="color:red;"></span>人
+					</div>
+					<tbody id="ajaxCont">
+
+					</tbody>
+				</table>
+
+				<!--弹出窗-->
+				<!--<div id="popup2" class="popup">
+					<div class="popup-head">
+						<h3>添加司机</h3>
+						<a href="javascript:void(0)" class="close_btn clearInfo"></a>
+					</div>
+					<form action="" id="driverForm">
+						<div class="popup-cont">
+							<div class="input-line">
+								<span class="input-title">身份证号码<label class="icon-must">*</label></span>
+								<input type="text" class="t-c-input input-width2" id="idcard" require="true" name="idcard" maxlength="30" />
+								<div class="carplatenumber" style="display: inline-block">
+									<span class="input-title">车牌号<label class="icon-must">*</label></span>
+									<input type="text" class="t-c-input input-width2 " name="carplatenumber" maxlength="8" require="true">
+								</div>
+								<span class="t-c-submit history-s-btn" id="searchDriver">查询司机信息</span>
+							</div>
+							<div class="input-line">
+								<span class="input-title">司机姓名<label class="icon-must">*</label></span>
+								<input type="text" class="t-c-input input-width2 " name="realname" maxlength="8" require="true">
+								<span class="input-title">联系电话<label class="icon-must">*</label></span>
+								<input type="text" class="t-c-input input-width2 input-number" name="mobilenumber" maxlength="13" require="true">
+
+							</div>
+							<div class="input-line">
+								<span class="input-title">车辆结构<label class="icon-must">*</label></span>
+								<div class="t-c-input-select">
+									<input type="text" class="t-c-input input-width2" init="true" name="cartype" require="true" />
+									<label class="t-c-input-icon"></label>
+									<ul class="input-option" style="display: none" name="cartype">
+									</ul>
+								</div>
+								<span class="input-title">车长(米)<label class="icon-must">*</label></span>
+								<div class="t-c-input-select t-c-input-select-date">
+									<input type="text" class="t-c-input input-width1 proCarSelAll input-number" require="true" data-max="50" data-reg="[^0-9\-\.]"
+									 id="carLength" placeholder="" name="carlength">
+									<label class="t-c-input-icon"></label>
+								</div>
+							</div>
+							<div class="input-line" style="text-align: center;margin-top:20px;">
+								<span class="t-c-submit history-s-btn t-c-submit-disable" id="insertInfo">添加</span>
+							</div>
+						</div>
+					</form>
+				</div>-->
+				<!-- <div id="popup2" class="popup" style="width: 680px;">
+					<div class="popup-head">
+						<h3>添加司机</h3>
+						<a href="javascript:void(0)" class="close_btn clearInfo"></a>
+					</div>
+					<form action="" id="driverForm" style="margin-top:20px;">
+						<div class="release-cont">
+							<div class="input-line">
+								<span class="input-title release-man-number input-width3-1"><label class="icon-must">*</label>手机号</span>
+								<input type="text" class="t-c-input input-width2" name="mobilenumber" maxlength="11" require="true" id="mobilenumber">
+							</div>
+							<div class="input-line">
+								<span class="input-title release-man-number input-width3-1"><label class="icon-must">*</label>司机姓名</span>
+								<input type="text" class="t-c-input input-width2 " name="realname" maxlength="8" require="true">
+								<span class="input-title release-man-number input-width3-1">别名</span>
+								<input type="text" class="t-c-input input-width2 " name="remark" maxlength="8" id="remark">
+							</div>
+							<div class="input-line">
+								<span class="input-title release-man-number input-width3-1">身份证号</span>
+								<input type="text" class="t-c-input input-width2" id="idcard" name="certificatenumber" maxlength="18" />
+								<div class="carplatenumber" style="display: inline-block">
+									<span class="input-title input-width3-1"><label class="icon-must">*</label>车牌号</span>
+									<input type="text" class="t-c-input input-width2 " require="true" name="carplatenumber" maxlength="8">
+								</div>
+							</div>
+							<div class="input-line">
+								<span class="input-title input-width3-1">车型</span>
+								<div class="t-c-input-select">
+									<input type="text" class="t-c-input input-width2" init="true" name="carstruct" readonly="readonly" />
+									<label class="t-c-input-icon"></label>
+									<ul class="input-option" style="display: none" name="cartype">
+									</ul>
+								</div>
+								<span class="input-title input-width3-1">车长(米)</span>
+								<div class="t-c-input-select t-c-input-select-date">
+									<input type="text" class="t-c-input input-width2 proCarSelAll input-number" data-max="50" data-reg="[^0-9\-\.]" id="carLength"
+									 name="carlong" readonly="readonly">
+									<label class="t-c-input-icon"></label>
+								</div>
+							</div>
+							<div class="input-line">
+								<span class="input-title input-width3-1">载重(吨)</span>
+								<input type="text" class="t-c-input input-width2 " name="cardragmass" maxlength="8" />
+								<input type="text" class="t-c-input input-width2 " style="display: none" name="contactcarteamid" />
+							</div>
+							<div class="input-line" style="text-align: center;margin-top:20px;">
+								<span class="t-c-submit history-s-btn t-c-submit-disable" id="updateInfo">修改</span>
+								<span class="t-c-submit history-s-btn t-c-submit-disable" id="insertInfo">保存</span>
+								<span class="t-c-submit history-s-btn t-c-submit-disable" style="padding: 0 10px;" id="insertInfoGon">保存并继续添加</span>
+							</div>
+						</div>
+					</form>
+				</div> -->
+				<!--弹出窗end-->
+
+				<div id="Pagination" class="pagination">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--页脚-->
+	<div class="body-footer"></div>
+	<!-- js引入 -->
+	<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+	<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../js/weiget/getJson.js"></script>
+	<script type="text/javascript" src="../../js/weiget/base.js"></script>
+	<script type="text/javascript" src="../../js/weiget/placeholder.js"></script>
+	<script type="text/javascript" src="../../js/lib/template.js"></script>
+	<script type="text/javascript" src="../../js/weiget/ieMode.js"></script>
+	<script type="text/javascript" src="../../js/weiget/iLocalStorage.js"></script>
+	<script type="text/javascript" src="../../js/common/common.js"></script>
+	<script src="../../js/lib/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../../js/common/tradeViewApi.js"></script>
+	<script type="text/javascript" src="../../js/common/dispatchView.js"></script>
+	<script type="text/javascript" src="../../js/weiget/tradeFun.js"></script>
+	<script type="text/javascript" src="../../js/weiget/formCheck.js"></script>
+	<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js"></script>
+	<!--城市组件-->
+	<script type="text/javascript" src="../../js/weiget/area_yasuo.js"></script>
+	<script type="text/javascript" src="../../js/weiget/areadata-v2.0.js"></script>
+	<script type="text/javascript" src="../../js/weiget/area_plugin.js"></script>
+	<!--车长-->
+	<script type="text/javascript" src="../../js/weiget/carlen_plugin.js"></script>
+
+	<script type="text/javascript" src="../../js/page/driver/d-myDriver.js"></script>
+
+</body>
+
+</html>

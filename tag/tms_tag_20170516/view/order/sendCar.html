@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+        <title>陆鲸-经纪人-订单</title>
+		<!-- css引入 -->
+		<link rel="stylesheet" href="../../css/common/reset-min.css" />
+		<link rel="stylesheet" href="../../css/common/common.css"   />
+		<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css"   />
+		<!-- 业务中心-->
+		<link rel="stylesheet" href="../../css/page/trade/trade.css"  />
+	</head>
+	<body class="body-bg">
+		<!--头部-->
+		<div class="body-top"></div>
+		<!--主体-->
+		<div class="body-main">
+			<!--菜单-->
+			<div class="body-menu" id="tradeMenu"></div>
+			<!--内容-->
+			<div class="body-content">
+                <div class="t-c-title">
+					<span class="t-h2"  id="subTilte">&nbsp;</span>
+				</div>
+				<div class="modal-cont sendCar">
+					<form action="" id="searchForm">
+						<div class="input-line goods-input-line">
+							<span class="input-title">关键词</span>
+							<input type="text" class="t-c-input input-width1"  placeholder="车牌号/姓名"  name="keywords" />
+							<span class="input-title input-width5">车长(米)</span>
+							<div class="t-c-input-select t-c-input-select-date">
+								<input type="text" class="t-c-input input-width2 proCarSelAll input-number" data-max="50" data-reg="[^0-9\-\.]" id="carLength"
+								 placeholder="" name="carlong" readonly="readonly">
+								<label class="t-c-input-icon"></label>
+							</div>
+							<span class="input-title input-width5">车型</span>
+							<div class="t-c-input-select">
+								<input type="text" class="t-c-input input-width2" init="true" readonly="readonly" />
+								<label class="t-c-input-icon"></label>
+								<ul class="input-option" style="display: none" name="carstruct">
+								</ul>
+							</div>
+							&nbsp;<span class="t-c-submit history-s-btn"  id="searchSubmit">查询</span>&nbsp;<!-- <span class="t-c-submit history-s-btn t-c-submit-disable"  id="sendCar">确认派车</span> -->
+						</div>
+					</form>
+					<div class="pagination paginationUp">
+
+					</div>
+					<table class="t-table" width="946" cellpadding="0" cellspacing="0" >
+						<thead>
+							<tr>
+								<th style="width:120px;">车牌号</th>
+								<th style="width:160px;">司机姓名</th>
+								<th style="width:160px;">电话</th>
+								<th style="width:160px;">车型</th>
+								<th style="width:120px;">车长(米)</th>
+								<th style="width:120px;">操作</th>
+							</tr>
+						</thead>
+						<tbody  id="ajaxCont">
+
+						</tbody>
+					</table>
+
+					<div id="Pagination" class="pagination">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--页脚-->
+		<div class="body-footer"></div>
+		<!-- js引入 -->
+		<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+		<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/getJson.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/base.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/placeholder.js" ></script>
+		<script type="text/javascript" src="../../js/lib/template.js"></script>
+		<script type="text/javascript" src="../../js/weiget/ieMode.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/iLocalStorage.js" ></script>
+		<script type="text/javascript" src="../../js/common/common.js" ></script>
+		<script src="../../js/lib/jquery.pagination.js"></script>
+		<script type="text/javascript" src="../../js/common/tradeViewApi.js" ></script>
+		<script type="text/javascript" src="../../js/common/dispatchView.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/tradeFun.js" ></script>
+	<script type="text/javascript" src="../../js/weiget/carlen_plugin.js"></script>
+
+		<script type="text/javascript" src="../../js/page/order/sendCar.js" ></script>
+
+	</body>
+</html>

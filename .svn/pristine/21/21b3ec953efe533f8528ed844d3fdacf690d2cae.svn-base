@@ -1,0 +1,166 @@
+
+.pop-cover{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9998;
+}
+.pop-cover .pop-bg{
+    width: 100%;
+    background: #000;
+    opacity: 0.15;
+    filter:alpha(opacity=15);
+    height: 100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+}
+
+.pop-cover .tf-pop{
+    width:378px;
+    height:256px;
+    top: 50%;
+    margin:-128px -189px 0 0;
+    right: 50%;
+    position: absolute;
+    background:#ffffff;
+    border:1px solid #0b8ef0;
+    border-radius:2px;
+}
+.pop-cover .pop-pop{
+    opacity:0.89;
+    background:#333333;
+    border-radius:6px;
+   /* width:406px;*/
+    height:98px;
+    top: 50%;
+    margin:-49px -203px 0 0;
+    right: 50%;
+    position: absolute;
+}
+
+.pop-cover .pop-success{
+    padding-left: 92px;
+    background: url(../img/t-release-success32.png) no-repeat 28px 34px;
+    color: #fff;
+    height:98px;
+    line-height: 98px;
+    font-size:24px;
+    text-align: left;
+    padding-right: 92px;
+}
+.pop-cover .pop-fail{
+    padding-left: 92px;
+    background: url(../img/t-error32.png) no-repeat 28px 34px;
+    color: #fff;
+    height:98px;
+    line-height: 98px;
+    font-size:24px;
+    text-align: left;
+    padding-right: 92px;
+}
+
+.pop-cover .pop-pop  .tf-close{
+    height: 32px;
+    width: 32px;
+}
+.pop-cover .tf-close{
+    z-index: 10;
+    background: url(../img/t-dialog-close.png) no-repeat center center;
+    width: 48px;
+    height:48px;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+}
+
+.pop-cover .pop-content{
+    padding-top: 113px;
+    background: url(../img/t-dialog-tips.png) no-repeat center 40px;
+}
+
+.pop-cover .pop-text{
+    font-size:16px;
+    color:#252525;
+    line-height: 21px;
+    padding: 0 20px;
+    text-align: center;
+    padding-bottom: 33px;
+    height: 42px;
+}
+
+.pop-cover .pop-footer{
+    background:#f3f4f6;
+    border-radius:2px;
+    width:100%;
+    position: relative;
+    height:68px;
+}
+
+.pop-cover .t-c-submit{
+    background:#0b8ef0;
+    border:1px solid #0b8ef0;
+    border-radius:2px;
+    width:96px;
+    height:36px;
+    font-size:14px;
+    color:#ffffff;
+    text-align:center;
+    line-height: 36px;
+    position: absolute;
+    left: 70px;
+    display: block;
+    cursor: pointer;
+    top:17px;
+}
+
+.pop-cover .t-c-sub-submit{
+    border:1px solid #0b8ef0;
+    border-radius:2px;
+    width:96px;
+    height:36px;
+    font-size:14px;
+    text-align:center;
+    line-height: 36px;
+    background:#fff;
+    color: #0b8ef0;
+    position: absolute;
+    top:17px;
+    right: 70px;
+    display: block;
+    cursor: pointer;
+}
+
+/*
+.pop-title{
+    display: block;
+    height: 48px;
+    background: #f3f4f6;
+    line-height: 48px;
+    text-align: center;
+    font-size: 18px;
+}*/
+.pop-cover .pop-iframe{
+    width: 620px;
+    height:454px;
+    margin: -227px -310px 0 0;
+}
+.pop-cover  .pop-iframe .pop-footer{
+    bottom: 0;
+}
+.pop-cover .pop-iframe .pop-content{
+    padding-top: 28px;
+    padding-bottom: 20px;
+    background: none;
+    height: 338px;
+}
+.pop-cover .pop-iframe iframe{
+    border: none;
+}
+
+.pop-cover .pop-iframe .input-word{
+    line-height: 36px;
+    margin-left: 10px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+        <title>陆鲸供应链-批量下单</title>
+		<!-- css引入 -->
+		<link rel="stylesheet" href="../../css/common/reset-min.css" />
+		<link rel="stylesheet" href="../../css/common/common.css"   />
+		<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css"   />
+		<!-- 业务中心-->
+		<link rel="stylesheet" href="../../css/page/trade/trade.css"  />
+	</head>
+	<body class="body-bg">
+		<!--头部-->
+		<div class="body-top"></div>
+		<!--主体-->
+		<div class="body-main">
+			<!--菜单-->
+			<div class="body-menu" id="tradeMenu"></div>
+			<!--内容-->
+			<div class="body-content">
+
+				<div class="t-sub-title" id="t-sub-title">
+					<a href="./addOrder.html" class="title"  title="下单" >新增订单</a>
+					<a href="./addOrder-batch.html" class="title current"   title="批量下单">批量下单</a>
+				</div>
+				<div class="modal-cont">
+					<form enctype="multipart/form-data">
+						<div class="order-bar">
+							<div class="upload clearfix" style="margin:0px 0 0px 20px;float:left;">
+								<a href="javascript:;" class="a-upload" id="saveOrder" style="background: #0a8ef0 url('../../css/img/upload.png') 10px center no-repeat;">
+									提交订单
+								</a>
+								<div class="showFileName"></div>
+							</div>
+							<a href="javascript:;" style="margin:0px 0 0px 20px;float:left;background: #65e26a url('../../css/img/download.png') 10px center no-repeat;" class="a-upload downexcel" id="uploadOrder"> <input type="file" name="excel" id="insertOrder" class="order-batch">导入Excel</a>
+							<a href="../../download/%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E8%AE%A2%E5%8D%95%E6%A8%A1%E6%9D%BF.xlsx" class="order-batch-download">下载订单模板</a>
+						</div>
+					</form>
+					<div class="pagination paginationUp"></div>
+					<table class="t-table" width="946" cellpadding="0" cellspacing="0" >
+						<thead>
+						<tr>
+							<th style="width:20px;">
+								<input type="checkbox" class="all-check">
+							</th>
+							<th style="width: 80px;">发货人</th>
+							<th style="width: 120px;">发货人电话</th>
+							<th style="width: 120px;">省市区</th>
+							<th style="width: 80px;">详细地址</th>
+							<th style="width: 80px;">收货人</th>
+							<th style="width: 150px;">收货人电话</th>
+							<th style="width: 130px;">省市区</th>
+							<th style="width: 130px;">详细地址</th>
+							<th style="width: 80px;">操作</th>
+						</tr>
+						</thead>
+						<tbody  id="ajaxCont">
+						</tbody>
+					</table>
+
+					<div id="Pagination" class="pagination"></div>
+
+				</div>
+
+
+			</div>
+		</div>
+		<!--页脚-->
+		<!--<div class="body-footer"></div>-->
+		<!-- js引入 -->
+		<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+		<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/getJson.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/base.js" ></script>
+		<script type="text/javascript" src="../../js/lib/template.js"></script>
+		<script type="text/javascript" src="../../js/weiget/ieMode.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/iLocalStorage.js" ></script>
+		<script type="text/javascript" src="../../js/common/common.js"></script>
+	<script type="text/javascript" src="../../js/common/dispatchView.js"></script>
+		<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/tradeFun.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/form.js" ></script>
+		<script src="../../js/lib/jquery.pagination.js"></script>
+		<!--当前页面-->
+		<script type="text/javascript" src="../../js/page/order/addOrder-batch.js" ></script>
+
+	</body>
+</html>

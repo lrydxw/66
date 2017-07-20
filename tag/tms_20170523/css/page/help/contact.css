@@ -1,0 +1,256 @@
+@charset "utf-8";
+.body-menu p {
+	background-image: none;
+}
+.body-menu p:hover{
+  	background-image: none;
+  	color: #252525;
+}
+.crumbs {
+	font-size: 16px;
+	color: #252525;
+	height: 46px;
+	line-height: 46px;
+	border-bottom: 1px solid #dfdfdf;
+	padding: 0 27px;
+}
+/*意见反馈*/
+.form-group {
+	overflow: hidden;
+	zoom: 1;
+	margin-bottom: 20px;
+}
+.form-group label {
+	float: left;
+	width: 84px;
+	font-size: 14px;
+	line-height: 38px;
+	color: #252525;
+	text-align: right;
+	padding-right: 12px;
+}
+.form-group .lh16 {
+	line-height: 16px;
+}
+.form-group .input {
+	font-size: 14px;
+	font-family:MicrosoftYaHei;
+	border: 1px solid #dfdfdf;
+	background: #f7f9fc;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	height: 36px;
+	line-height: 36px;
+	*line-height: 38px !important;
+  	padding: 0px 5px;
+	vertical-align: middle;
+	outline: none;
+}
+.form-group textarea {
+	resize: none;
+	font-size: 14px;
+	font-family:MicrosoftYaHei;
+	height: 90px;
+	width: 268px;
+	*width:280px !important;
+	overflow-y: hidden;
+	padding:0 5px ;
+	background: #f7f9fc;
+	border: none;
+	outline: none;
+}
+.ad-box{
+	position: relative;
+	padding-top: 10px;
+  	padding-bottom: 20px;
+  	border: 1px solid #dfdfdf;
+  	background: #f7f9fc;
+  	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.advise-sapn{
+  	position: absolute;
+  	right: 10px;
+  	bottom: 2px;
+	color: #999999;
+  	text-align: right; 
+  	
+}
+.error-msg {
+  line-height: 38px;
+  color: #f24b24;
+}
+.command {
+	font-size: 14px;
+	line-height: 38px;
+	color: #0b8ef0;
+	padding-left: 20px;
+}
+.command span {
+	cursor: pointer;
+}
+.buttom-box {
+	margin-left: 96px;
+}
+.buttom-box button {
+	outline: none;
+	width: 98px;
+	height: 30px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border: 1px solid #0b8ef0;
+	font-size: 14px;
+	line-height: 21px;
+}
+.buttom-box .Tbutton {
+	color: #ffffff;
+	background: #0b8ef0;
+	cursor: pointer;
+}
+.buttom-box .Fbutton {
+	color: #0b8ef0;
+	background: #ffffff;
+	cursor: pointer;
+}
+.buttom-box .Tbutton:active{
+	background:#0075cd;
+}
+.buttom-box .Fbutton:active{
+	background:#f7f9fc;
+}
+.fl {
+	display: inline;
+	float: left;
+}
+.fb {
+	font-weight: bold;
+}
+.w280 {
+	width: 280px;
+}
+.mt30 {
+	margin-top: 30px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.ml40 {
+	margin-left: 40px;
+}
+.mb64 {
+	margin-bottom: 64px;
+}
+/*aboutUs*/
+.text {
+	width: 900px;
+	margin-top: 24px;
+	color: #666666;
+}
+/*callUs*/
+.address {
+	color: #7B7B7B;
+	margin-top: 6px;
+}
+/*joinInCooperation*/
+.joinIn {
+	padding-top: 21px;
+	padding-left: 22px;
+}
+.joinInCo-pic {
+	width: 900px;
+	height: 280px;
+}
+.joinInCo {
+	width: 678px;
+	padding-left: 26px;
+	font-size: 14px;
+	line-height: 21px;
+	margin-top: 17px;
+}
+.joinInTitle {
+	margin-bottom: 2px;
+	color: #828282;
+	font-size: 14px;
+}
+.joinInText {
+	color: #666666;
+}
+.tel {
+	color: #64A0E5;
+}
+.email {
+	color: #64A0E5;
+}
+
+
+
+/*adviseBack*/
+.advise{
+	margin: 32px 28px;
+}
+.adviseBox{
+	margin-bottom: 20px;
+	
+}
+.adviseBox .title{
+	margin-right: 12px;
+}
+.adviseBox .content{
+	vertical-align: top;
+}
+.advise .adviseBox{
+	margin-bottom: 20px;
+}
+.adviseBox .inputArea input{
+	display: inline-block;
+	width:278px;
+	height:36px;
+	border-radius:2px;
+	background:#f7f9fc;
+	border:1px solid #e8ebef;
+	border-radius:2px;
+
+}
+.adviseBox input.area{
+	width:278px;
+	height:133px;
+}
+.adviseBox .addFile{
+	margin-left: 28px;
+}
+.adviseBox .fileOp{
+	color:#0b8ef0;
+	text-align:center;
+}
+.adviseBox .scan{
+	margin-left: 20px;
+	margin-right: 48px;
+}
+.btn{
+	margin-top: 64px;
+	margin-left: 74px;
+
+}
+.btn .btn1{
+	width:98px;
+	height:32px;
+	font-size:14px;
+	border:1px solid #0b8ef0;
+	border-radius:2px;
+	text-align: center;
+	padding: 4px 35px 7px;
+	
+}
+.btn .submit{
+	background:#0b8ef0;
+	margin-right: 32px;
+	color:#ffffff;
+}
+.btn .close{
+	color:#0b8ef0;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="no-cache" http-equiv="pragma">
+	<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+	<title>陆鲸供应链-运力管理-我的司机</title>
+	<!-- css引入 -->
+	<link rel="stylesheet" href="../../css/common/reset-min.css" />
+	<link rel="stylesheet" href="../../css/common/common.css" />
+	<!-- 业务中心-->
+	<link rel="stylesheet" href="../../css/page/trade/trade.css" />
+	<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css" />
+</head>
+
+<body class="body-bg">
+	<!--头部-->
+	<div class="body-top"></div>
+	<!--主体-->
+	<div class="body-main">
+		<!--菜单-->
+		<div class="body-menu" id="tradeMenu"></div>
+		<!--内容-->
+		<div class="body-content">
+                <div class="t-c-title">
+					<span class="t-h2">我的司机</span>
+				</div>
+			<div class="modal-cont">
+					<form  id="searchForm">
+						<div class="input-line goods-input-line">
+							<!--<span class="input-title" style="width:140px;"></span>-->
+							<input type="text" class="t-c-input input-width1" id="keywords" placeholder="姓名\备注\手机号\车牌号" name="keywords" />
+							<span class="input-title input-width5">车长(米)</span>
+							<div class="t-c-input-select t-c-input-select-date">
+								<input type="text" class="t-c-input input-width2 proCarSelAll input-number" data-max="50" data-reg="[^0-9\-\.]" id="carLength2"
+								 placeholder="" name="carlong1" readonly="readonly">
+								<label class="t-c-input-icon"></label>
+							</div>
+							<span class="input-title input-width5">车型</span>
+							<div class="t-c-input-select">
+								<input type="text" class="t-c-input input-width2" init="true" readonly="readonly" />
+								<label class="t-c-input-icon"></label>
+								<ul class="input-option" style="display: none" name="carstruct1">
+								</ul>
+							</div>
+							<span class="t-c-submit history-s-btn" id="searchSubmit">查询</span>
+						</div>
+						<div class="input-line goods-input-line">
+							<span class="t-c-submit history-s-btn" id="addCar">添加司机</span>
+							<span class="t-c-submit history-s-btn" id="batchDriver" style="position:relative"><input type="file" name="excel" id="insertOrder" class="driver-batch">批量添加司机</span>
+								<a href="../../download//%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E5%8F%B8%E6%9C%BA%E6%A8%A1%E6%9D%BF.xlsx" class="driver-batch-download">下载司机信息模板</a>
+						</div>
+					</form>
+					<div class="pagination paginationUp"></div>
+				<table class="t-table" width="946" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th style="width:180px;">司机姓名</th>
+							<th style="width:180px;">手机号</th>
+							<th style="width:160px;">车牌号</th>
+							<th style="width:170px;">车辆信息</th>
+							<!-- <th style="width:170px;">运输状态</th> -->
+							<th style="width:160px;">操作</th>
+						</tr>
+					</thead>
+					<div style="margin: 5px 0">
+						共有司机 <span id="total" style="color:red;"></span>人，未认证司机 <span id="noparty" style="color:red;"></span>人
+					</div>
+					<tbody id="ajaxCont">
+
+					</tbody>
+				</table>
+
+
+				<div id="Pagination" class="pagination">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--页脚-->
+	<div class="body-footer"></div>
+	<!-- js引入 -->
+
+	<!-- 基础js引入 -->
+	<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+	<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../js/weiget/getJson.js"></script>
+	<script type="text/javascript" src="../../js/weiget/base.js"></script>
+	<script type="text/javascript" src="../../js/weiget/placeholder.js"></script>
+	<script type="text/javascript" src="../../js/lib/template.js"></script>
+	<script type="text/javascript" src="../../js/weiget/ieMode.js"></script>
+	<script type="text/javascript" src="../../js/weiget/iLocalStorage.js"></script>
+	<script type="text/javascript" src="../../js/common/common.js"></script>
+	<script src="../../js/lib/jquery.pagination.js"></script>
+	<!--<script type="text/javascript" src="../../js/common/tradeViewApi.js" ></script>-->
+	<script type="text/javascript" src="../../js/common/dispatchView.js"></script>
+	<script type="text/javascript" src="../../js/weiget/tradeFun.js"></script>
+	<script type="text/javascript" src="../../js/weiget/formCheck.js"></script>
+	<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js"></script>
+	<!-- 基础js结束 -->
+	<!--车长-->
+	<script type="text/javascript" src="../../js/weiget/carlen_plugin.js"></script>
+	<!--时间组件-->
+	<script type="text/javascript" src="../../js/weiget/moment.min.js"></script>
+
+	<!--百度地图-->
+	<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=0YuHG2eQRD1XuQKGG04AFg3Y2GzlzwSU"></script>
+	<script type="text/javascript" src="../../js/weiget/mapPlugin.min.js"></script>
+
+	<script type="text/javascript" src="../../js/page/driver/d-myDriver.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+        <title>陆鲸-Demo</title>
+		<!-- css引入 -->
+		<link rel="stylesheet" href="../../css/common/reset-min.css" />
+		<link rel="stylesheet" href="../../css/common/common.css" type="text/css"  />
+		<link rel="stylesheet" href="../../css/page/demo/demo.css" />
+	</head>
+	<body class="body-bg">
+		<!--头部-->
+		<div class="body-top"></div>
+		<!--主体-->
+		<div class="body-main">
+			<!--菜单-->
+			<div id="tradeMenu" class="body-menu"></div>				
+			<!--内容-->
+			<div class="body-content">
+                
+			</div>
+		</div>
+		<!--页脚-->
+		<div class="body-footer"></div>
+		<!-- js引入 -->
+		<!-- artTemplate模板
+		<script id="test" type="text/html">  
+            {{if isAdmin}}  
+                <p>{{title}}</p>  
+                <ul>  
+                    {{each list as value index}}  
+                        <li>索引：{{index}}:{{value}}</li>  
+                    {{/each}}  
+                </ul>  
+            {{/if}}  
+        </script>
+        -->
+        
+		<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+		<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/getJson.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/base.js" ></script>
+		<script type="text/javascript" src="../../js/lib/template.js"></script>
+		<script type="text/javascript" src="../../js/weiget/ieMode.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/iLocalStorage.js" ></script>
+		<script type="text/javascript" src="../../js/common/common.js" ></script>
+		<script type="text/javascript" src="../../js/page/demo/demo.js" ></script>
+	</body>
+</html>

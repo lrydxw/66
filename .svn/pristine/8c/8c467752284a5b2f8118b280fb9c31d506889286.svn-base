@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+        <title>陆鲸-订单</title>
+		<!-- css引入 -->
+		<link rel="stylesheet" href="../../css/common/reset-min.css" />
+		<link rel="stylesheet" href="../../css/common/common.css"  />
+		<!-- 业务中心-->
+		<link rel="stylesheet" href="../../css/page/trade/trade.css"  />
+	</head>
+	<body class="body-bg">
+		<!--头部-->
+		<div class="body-top"></div>
+		<!--主体-->
+		<div class="body-main">
+			<!--菜单-->
+			<div class="body-menu" id="tradeMenu"></div>
+			<!--内容-->
+			<div class="body-content">
+                <div class="t-c-title">
+					<span class="t-h2">订单详情</span>
+				</div>
+				<div class="modal-cont" id="modalDetail">
+					<div class="goods-trade-title">
+						基础信息
+					</div>
+					<ul class="goods-goods-detail order-order-detail">
+						<li style="width:50%">
+							<span class="title">订单编号:</span>
+							<span class="dec" name="showOrdercode"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">外部单号:</span>
+							<span class="dec" name="outcode"></span>
+						</li>
+						<li style="width:100%">
+							<span class="title">当前状态:</span>
+							<span class="dec" name="statusWord" style="color:#ff0000"></span>
+						</li>
+					</ul>
+					<div class="goods-trade-title">
+						费用信息
+					</div>
+					<ul class="goods-goods-detail order-order-detail">
+						<li style="width:50%">
+							<span class="title">应收运价:</span>
+							<span class="dec" name="feein"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">应付运价:</span>
+							<span class="dec" name="feeout"></span>
+						</li>
+					</ul>
+					<div class="switchClass" id="driver" >
+						<div class="goods-trade-title">
+							司机信息
+						</div>
+						<ul class="goods-goods-detail order-order-detail">
+							<li  style="width:50%" class="switchClass">
+								<span class="title">车牌号:</span>
+								<span class="dec" name="carNumber"></span>
+							</li>
+							<li  style="width:50%">
+								<span class="title">姓名:</span>
+								<span class="dec" name="driverName"></span>
+							</li>
+							<li  style="width:50%">
+								<span class="title">车辆信息:</span>
+								<span class="dec" name="memo"></span>
+							</li>
+							<li  style="width:50%">
+								<span class="title">手机号:</span>
+								<span class="dec" name="driverPhone"></span>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="switchClass" id="receipt" >
+						<div class="goods-trade-title" >
+							 签收信息
+						</div>
+						<ul class="goods-goods-detail order-order-detail">
+							<li  style="width:50%" class="switchClass">
+								<span class="title">签收人:</span>
+								<span class="dec" name="receiptman"></span>
+							</li>
+							<li  style="width:50%">
+								<span class="title">签收时间:</span>
+								<span class="dec" name="receiptdate"></span>
+							</li>
+							<li  style="width:100%">
+								<span class="title">备注:</span>
+								<span class="dec" name="receiptMemo"></span>
+							</li>
+							<li  style="width:100%" class="switchClass">
+								<!-- <span class="title">回单照片:</span> -->
+								<span class="dec" name="receiptimgurl"></span>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="goods-trade-title">
+						运输信息
+					</div>
+					<ul class="goods-goods-detail order-order-detail">
+						<li style="width:50%">
+							<span class="title">货物名称:</span>
+							<span class="dec" name="goodsname"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">运输数量:</span>
+							<span class="dec" name="goodsInfo"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">需求车型:</span>
+							<span class="dec" name="cartype"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">需求车长:</span>
+							<span class="dec" name="carlengthmin"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">计划装货:</span>
+							<span class="dec" name="usecartime"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">计划到货:</span>
+							<span class="dec" name="arrivaltime"></span>
+						</li>
+						<li style="width:100%">
+							<span class="title">需要回单:</span>
+							<span class="dec" name="add"></span>
+						</li>
+						<li style="width:100%">
+							<span class="title">备注:</span>
+							<span class="dec" name="memo"></span>
+						</li>
+					</ul>
+					
+					
+					<div class="goods-trade-title">
+						发货人信息
+					</div>
+					<ul class="goods-goods-detail order-order-detail">
+						<li style="width:50%">
+							<span class="title">发货人:</span>
+							<span class="dec" name="ownerlinkman"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">手机号:</span>
+							<span class="dec" name="ownerlinkphone"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">装货地:</span>
+							<span class="dec" name="from"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">详细地址:</span>
+							<span class="dec" name="fromdetail"></span>
+						</li>
+					</ul>
+					<div class="goods-trade-title">
+						收货人信息
+					</div>
+					<ul class="goods-goods-detail order-order-detail">
+						<li style="width:50%">
+							<span class="title">收货人:</span>
+							<span class="dec" name="consigneelinkman"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">手机号:</span>
+							<span class="dec" name="consigneemobilenumber"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">装货地:</span>
+							<span class="dec" name="to"></span>
+						</li>
+						<li style="width:50%">
+							<span class="title">详细地址:</span>
+							<span class="dec" name="todetail"></span>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+		<!--页脚-->
+		<div class="body-footer"></div>
+		<!-- js引入 -->
+		<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+		<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/getJson.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/base.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/placeholder.js" ></script>
+		<script type="text/javascript" src="../../js/lib/template.js"></script>
+		<script type="text/javascript" src="../../js/weiget/ieMode.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/iLocalStorage.js" ></script>
+		<script type="text/javascript" src="../../js/common/common.js"></script>
+		<script src="../../js/lib/jquery.pagination.js"></script>
+		<script type="text/javascript" src="../../js/common/tradeViewApi.js" ></script>
+		<script type="text/javascript" src="../../js/common/dispatchView.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/tradeFun.js" ></script>
+		<script type="text/javascript" src="../../js/page/order/orderDetail.js" ></script>
+	</body>
+</html>

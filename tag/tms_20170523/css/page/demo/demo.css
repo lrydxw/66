@@ -1,0 +1,9 @@
+@charset "utf-8";
+/*class  -连接*/
+.demo-box {
+    margin: 1.0rem 1.0rem;
+    height: 2.5rem;
+}
+#demoId{
+	padding: 1.0rem;
+}

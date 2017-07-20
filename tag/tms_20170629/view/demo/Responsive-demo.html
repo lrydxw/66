@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <title>陆鲸-首页</title>
+    <!-- css引入 -->
+    <link rel="stylesheet" href="../../css/common/reset-min.css" />
+    <link rel="stylesheet" href="../../css/common/common.css" type="text/css"  />
+    <link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css" type="text/css"  />
+    <link rel="stylesheet" href="../../css/page/party/index.css" />
+
+</head>
+<style>
+    body{
+        min-width: inherit;
+        overflow-x: hidden;
+    }
+    .floatbox-mobile{
+        display: none;
+    }
+    .floatbox-mobile .triangle img{
+        width:8px;
+        height:8px;
+    }
+    .floatbox-mobile .icon{
+        margin:20px 0 0 10px;
+        width:220px;
+    }
+    .floatbox-mobile .icon img{
+        max-width:88px;
+
+    }
+    .download{
+        float:right;
+        margin:34px 3% 0  0;
+        width:35%;
+    }
+    .download-mobile-btn{
+        background:#0b8ef0;
+        width:100%;
+        height:60px;
+        color:#fff;
+        font-size:24px;
+        line-height:60px;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+
+    }
+    @media screen and (min-width:641px) and (max-width: 1280px) {
+        body{
+            min-width: inherit;
+        }
+        .bt-div1{
+            max-width: 1190px;
+            width:100%;
+        }
+        .bf-menu{
+            max-width:1190px;
+            width:100%;
+        }
+        .bf-link{
+            margin-left:140px;
+        }
+    }
+    @media screen and (max-width: 640px) {
+
+        body{
+            min-width: inherit;
+        }
+        .bt-div1{
+            width:270px;
+        }
+        .bt-fdiv{
+            display: none;
+        }
+        .bt-service{
+            display: none;
+        }
+        .market1 li{
+            width:50%;
+        }
+        .market2-box{
+            display: none;
+        }
+        .mt3-main h3{
+            display:none
+        }
+        .mt3-main img{
+            left:0px;
+            width:100%;
+        }
+        .mt3-main p{
+            display:none;
+        }
+        .fast-search,.floatbox,.body-footer{
+            display: none;
+        }
+        .floatbox-mobile{
+            display: block;
+        }
+        .floatbox-mobile .floatbox-bg{
+            margin-right: 0;
+        }
+    }
+
+</style>
+<!--[if IE]>
+<style>
+    .market {
+        height: 480px;
+        width: 1280px;
+        margin: 0 auto
+    }
+
+    .market1 {
+        height: 477px
+        display:block;
+    }
+
+    .market1 li {
+        float: left;
+        margin: 120px 100px 0 0;
+        display:block;
+        width: 170px;
+    }
+    .market1 li:first-child {
+        margin-left: 156px
+    }
+
+</style>
+<![endif]-->
+
+<body class="body-bg">
+<!--头部-->
+<div class="body-top"></div>
+<!--主体-->
+<div class="slider">
+    <div class="prev">
+        <img src="../../css/img/p-next-bg.png" width="51" height="102" class="p-bg"/>
+        <img src="../../css/img/p-prev.png" alt="" height="32"/>
+        <span class="count">1/2</span>
+    </div>
+    <ul class="slider-ul">
+        <li class="li1">
+            <h3>跑长途  上陆鲸</h3>
+            <p>提供海量真实货源信息、车源信息，实时更新</p>
+        </li>
+        <li class="li2"></li>
+    </ul>
+    <div class="next">
+        <img src="../../css/img/p-prev-bg.png" width="51" height="102" class="p-bg"/>
+        <img src="../../css/img/p-next.png" alt="" height="32"/>
+        <span class="count">1/2</span>
+    </div>
+    <div class="fast-search">
+        <div class="fs-bg"></div>
+        <div class="fs-main">
+            <div class="menu-a clearfix">
+                <div class="menu-s">
+                    <label  class='cur' id="goods">快速找货</label>
+                </div>
+                <div class="menu-s">
+                    <label  id="cars">快速找车</label>
+                </div>
+            </div>
+            <div class="cont-a clearfix">
+                <div class="cont-s" style="display: block">
+                    <div class="goods-div">
+                        <span>选择/输入当前位置</span>
+                        <input type="text" class="inputgoods proCitySelAll toum" id="fromaddress" placeholder="">
+                        <!--<div class="address-error">-->
+                        <!--<i>-</i>-->
+                        <!--<b>请输入市区</b>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="goods-div">
+                        <span>选择/输入目的地</span>
+                        <input type="text" class="inputgoods proCitySelAll toum" id="toaddress" placeholder="">
+                    </div>
+                    <a href="javascript:void(0)" class="search-btn search-goods-btn">找货</a>
+                </div>
+                <div class="cont-s">
+                    <div class="cars-div">
+                        <span>选择/输入当前位置</span>
+                        <input type="text" class="inputcars proCitySelAll toum" id="fromcars" placeholder="">
+                    </div>
+                    <div class="cars-div">
+                        <span>选择/输入目的地</span>
+                        <input type="text" class="inputcars proCitySelAll toum" id="tocars" placeholder="">
+                    </div>
+                    <div class="cars-div w150">
+                        <span class="span_tips">选择车长范围</span>
+                        <input type="text" class="inputcars proCarSelAll toum" id="carslength" placeholder="">
+                    </div>
+                    <a href="javascript:void(0)" class="search-btn search-cars-btn">找车</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="floatbox shrink">
+    <div class="floatbox-bg"></div>
+    <div class="floatbox-main">
+        <div class="triangle"><img src="../../css/img/p-triangle-up-2.png" alt=""/></div>
+        <div class="icon">
+            <img src="../../css/img/p-icon.png" alt=""/>
+            <h5>跑长途, 上陆鲸</h5>
+            <span>物流信息交易平台</span>
+        </div>
+        <div class="erweima">
+            <div class="erweima-main">
+                <img src="../../css/img/p-erweima.png"  width="96" height="96" alt="陆鲸" class='erweima-img'/>
+                <p>扫描二维码下载APP</p>
+            </div>
+            <div class="selectPhone">
+                <img src="../../css/img/p-apple.png"  width="50" height="50" alt=""/>
+                <img src="../../css/img/p-android.png" width="50" height="50" alt=""/>
+                <p>扫描二维码下载APP</p>
+            </div>
+        </div>
+    </div>
+    <div class="right-move">
+        <div class="rm-bg"></div>
+        <div class="rm-main"></div>
+    </div>
+</div>
+<div class="floatbox-mobile floatbox" >
+    <div class="floatbox-bg"></div>
+    <div class="floatbox-main">
+        <div class="triangle"><img src="../../css/img/p-triangle-up-2.png" alt=""/></div>
+        <div class="icon">
+            <img src="../../css/img/p-icon.png" alt=""/>
+            <h5>跑长途, 上陆鲸</h5>
+            <span>物流信息交易平台</span>
+        </div>
+        <div class="download">
+            <a href="http://e.lujing56.com" class="download-mobile-btn">立即下载</a>
+        </div>
+    </div>
+</div>
+<div class="market market1">
+    <ul>
+        <li>
+            <i class="icon-ft iconfont2 icon-phomeicon4">&#xe600;</i>
+            <span>开通放心付<br/>平台担保交易</span>
+        </li>
+        <li>
+            <i class="icon-ft iconfont2 icon-phomeicon2">&#xe601;</i>
+            <span>海量货源车源<br/>快速找车发货</span>
+        </li>
+        <li>
+            <i class="icon-ft iconfont3 icon-phomeicon3">&#xe608;</i>
+            <span>真实身份<br/>交易安全</span>
+        </li>
+        <li>
+            <i class="icon-ft iconfont2 icon-phomeicon1">&#xe603;</i>
+            <span>LBS定位<br/>快速调车</span>
+        </li>
+    </ul>
+</div>
+<div class="market-box market2-box">
+    <div class="market market2">
+        <img src="../../css/img/p-Group.jpg"  width="1280" height="480" class="market2-bg" alt=""/>
+        <div class="mt2-main">
+            <h3>陆鲸桌面版</h3>
+            <p>提供海量真实货源信息、车源信息，实时更新快；会员信息经过诚信认证。</p>
+            <a href="http://down.tf56.com:5683/lujing/last/lujing.zip" class="downloadbtn">下载陆鲸桌面版</a>
+        </div>
+    </div>
+</div>
+
+<div class="market market3">
+    <div class="mt3-main">
+        <img src="../../css/img/p-chinamap.png" width="494" height="408" alt=""/>
+        <h3>传化公路港全国网络图</h3>
+        <p>到2020年，传化计划建成10枢纽160基地实体平台网络辐射全国干线交通。截止2014年，传化公路港实体平台已在全国17个省会城市，51个枢纽级城市，合计落实了68个项目。在浙江、四川、江苏、山东、福建、重庆、天津、黑龙江、贵州、河北、吉林等11个省市进行了全省网络布局。</p>
+    </div>
+</div>
+
+<!--页脚-->
+<div class="body-footer"></div>
+<!-- js引入 -->
+<!-- artTemplate模板
+<script id="test" type="text/html">
+    {{if isAdmin}}
+        <p>{{title}}</p>
+        <ul>
+            {{each list as value index}}
+                <li>索引：{{index}}:{{value}}</li>
+            {{/each}}
+        </ul>
+    {{/if}}
+</script>
+-->
+
+<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="../../js/weiget/getJson.js" ></script>
+<script type="text/javascript" src="../../js/weiget/base.js" ></script>
+<script type="text/javascript" src="../../js/lib/template.js"></script>
+<script type="text/javascript" src="../../js/weiget/ieMode.js" ></script>
+<script type="text/javascript" src="../../js/weiget/iLocalStorage.js" ></script>
+<script type="text/javascript" src="../../js/common/common.js" ></script>
+<script type="text/javascript" src="../../js/weiget/area_yasuo.js" ></script>
+<script type="text/javascript" src="../../js/weiget/areadata-v2.0.js" ></script>
+<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js" ></script>
+<script type="text/javascript" src="../../js/weiget/area_plugin.js" ></script>
+<script type="text/javascript" src="../../js/weiget/carlen_plugin.js" ></script>
+<!--<script type="text/javascript" src="../../js/common/tradeViewApi.js" ></script>-->
+<script type="text/javascript" src="../../js/page/party/index.js" ></script>
+</body>
+</html>
+<script>
+    var carlength=CarLengthComponent()
+    carlength.start()
+    var address=AddressComponent('yes')
+    address.start()
+</script>

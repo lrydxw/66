@@ -1,0 +1,166 @@
+/*公用:begin*/
+div, p {
+    margin: 0;
+    padding: 0;
+}
+
+.tf-pop {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.thin-border {
+    position: relative;
+}
+
+.thin-border:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    border-bottom: 1px solid #dfdfdf;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.thin-border-left:after {
+    border-left: 1px solid #DADADA;
+}
+
+.thin-border-top:after {
+    border-top: 1px solid #DADADA;
+}
+
+.tf-fadeIn {
+    -webkit-animation: fadeIn ease-in-out 1s 0;
+    animation: fadeIn ease-in-out 1s 0;
+}
+
+.tf-fadeIn-short {
+    -webkit-animation: fadeIn ease-in-out 0.4s 0;
+    animation: fadeIn ease-in-out 0.4s 0;
+}
+
+.tf-fadeOut {
+    -webkit-animation: fadeOut ease-in-out 1s 0;
+    animation: fadeOut ease-in-out 1s 0;
+}
+
+.tf-fadeOut-short {
+    -webkit-animation: fadeOut ease-in-out 0.4s 0;
+    animation: fadeOut ease-in-out 0.4s 0;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*公用:end*/
+.pop-cover {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 9998;
+}
+
+.tf-pop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    width: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.pop-content {
+    padding: 22px 0;
+}
+
+.pop-title {
+    padding-bottom: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pop-text {
+    padding: 0 18px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #252525;
+    text-align: center;
+}
+
+.pop-text.has-title {
+    font-size: 14px;
+    color: #999;
+}
+
+.pop-text strong {
+    font-style: normal;
+    color: #ff6230;
+}
+
+.pop-footer {
+    height: 40px;
+    color: #3b98e0;
+}
+
+.tf-pop .w100 {
+    width: 100%;
+}
+
+.tf-pop .w50 {
+    float: left;
+    width: 49.9%;
+}
+
+.pop-btn {
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+}

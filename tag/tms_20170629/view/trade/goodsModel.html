@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+        <title>陆鲸-模板管理</title>
+		<!-- css引入 -->
+		<link rel="stylesheet" href="../../css/common/reset-min.css" />
+		<link rel="stylesheet" href="../../css/common/common.css"   />
+		<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css"   />
+		<!-- 业务中心-->
+		<link rel="stylesheet" href="../../css/page/trade/trade.css"  />
+	</head>
+	<body class="body-bg">
+		<!--头部-->
+		<div class="body-top"></div>
+		<!--主体-->
+		<div class="body-main">
+			<!--菜单-->
+			<div class="body-menu" id="tradeMenu"></div>
+			<!--内容-->
+			<div class="body-content">
+                <div class="t-c-title">
+					<span class="t-h2">模板管理</span>
+					<a href="./goodsModel-add.html?type=add" class="add-model t-c-submit">添加模板</a>
+				</div>
+				<div class="modal-cont">
+					<div class="pagination paginationUp"></div>
+					<table class="t-table" width="946" cellpadding="0" cellspacing="0" >
+						<thead>
+							<tr>
+								<th style="width: 100px;">模板名称</th>
+								<th style="width: 120px;">发货地</th>
+								<td style="width: 15px;" class="table-no-padding"></td>
+								<th style="width: 120px;">收货地</th>
+								<th style="width: 80px;">货物信息</th>
+								<th style="width: 80px;">车辆要求</th>
+								<th style="width: 150px;">创建时间</th>
+								<th style="width: 150px;">操作</th>
+							</tr>
+						</thead>
+						<tbody  id="ajaxCont">
+
+						</tbody>
+					</table>
+
+					<div id="Pagination" class="pagination"></div>
+
+					<div class="no-model" style="display:none;">
+						<label class="no-model-icon"><img class="icon" src="../../css/img/t-no-model-icon.png" alt=""></label>亲！您还没有设定模板，快去<a href="./goodsModel-add.html?type=add">添加模板</a>吧！
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--页脚-->
+		<!--<div class="body-footer"></div>-->
+		<!-- js引入 -->
+		<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+		<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/getJson.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/base.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/placeholder.js" ></script>
+		<script type="text/javascript" src="../../js/lib/template.js"></script>
+		<script type="text/javascript" src="../../js/weiget/ieMode.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/iLocalStorage.js" ></script>
+		<script type="text/javascript" src="../../js/common/common.js"></script>
+		<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js" ></script>
+		<script src="../../js/lib/jquery.pagination.js"></script>
+		<script type="text/javascript" src="../../js/weiget/tradeFun.js" ></script>
+		nowtime.getDate
+		<script type="text/javascript" src="../../js/common/dispatchView.js" ></script>
+		<script type="text/javascript" src="../../js/page/trade/t-goodsModel.js" ></script>
+
+	</body>
+</html>

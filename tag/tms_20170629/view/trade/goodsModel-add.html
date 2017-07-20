@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="no-cache" http-equiv="pragma">
+	<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+	<title>陆鲸-模板管理-添加模板</title>
+	<!-- css引入 -->
+	<link rel="stylesheet" href="../../css/common/reset-min.css" />
+	<link rel="stylesheet" href="../../css/common/common.css" />
+	<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css" />
+	<!-- 业务中心-->
+	<link rel="stylesheet" href="../../css/page/trade/trade.css" />
+</head>
+
+<body class="body-bg">
+	<!--头部-->
+	<div class="body-top"></div>
+	<!--主体-->
+	<div class="body-main">
+		<!--菜单-->
+		<div class="body-menu" id="tradeMenu"></div>
+		<!--内容-->
+		<div class="body-content">
+			<div class="t-c-title">
+				<span class="t-h2" id="modalTitle">添加模板</span>
+			</div>
+			<form action="#" id="releaseForm">
+				<div class="release-cont cont2" style="display: none">
+					<div class="input-line">
+						<input type="hidden" name="chargetype">
+						<ul class="choose-ul clearfix">
+							<li class=" choose-type cur">派单</li>
+							<li class=" choose-type">按车竞价</li>
+							<li class=" choose-type">按吨竞价</li>
+						</ul>
+					</div>
+				</div>
+				<!--发货人信息-->
+				<div class="release-cont">
+					<div class="input-line">
+						<span class="input-title"><label class="icon-must">*</label>模板名称</span>
+						<input type="text" class="t-c-input input-width2"  name="modelname" maxlength="20" require="true">
+					</div>
+					<h3 class="tips-h">发货人信息</h3>
+					<div class="input-line">
+						<span class="input-title release-man-number input-width3-1">手机号</span>
+						<div class="t-c-input-select t-c-input-select-date ">
+							<!-- t-c-input-error-->
+							<input type="text" class="t-c-input input-width1 mobileCheck1" maxlength="13" name="ownerlinkphone" />
+						</div>
+						<span class="input-title release-man input-width3-1">发货人姓名</span>
+						<div class="t-c-input-select t-c-input-select-date ">
+							<!-- t-c-input-error-->
+							<input type="text" class="t-c-input input-width1" name="ownerlinkman" maxlength="30"  />
+						</div>
+					</div>
+					<div class="input-line">
+						<span class="input-title input-width3-1">装货地址</span>
+						<div class="t-c-input-select t-c-input-select-date t-c-input-select-address">
+							<!-- t-c-input-error-->
+							<input type="text" class="t-c-input input-width1 proCitySelAll" id="fromaddress" placeholder="选择/输入城市名称"  name="from"
+							/>
+							<label class="t-c-input-icon"></label>
+						</div>
+						<span class="input-title input-width3-1">详细地址</span>
+						<input type="text" class="t-c-input input-width1" placeholder="详细地址" name="fromdetail" maxlength="120">
+					</div>
+				</div>
+				<!--发货人信息end-->
+
+				<!--收货人信息-->
+				<div class="release-cont">
+					<h3 class="tips-h">收货人信息</h3>
+					<div class="input-line">
+						<span class="input-title release-man-number input-width3-1">手机号</span>
+						<div class="t-c-input-select t-c-input-select-date ">
+							<input type="text" class="t-c-input input-width1 mobileCheck2" maxlength="13" name="consigneemobilenumber" />
+						</div>
+						<span class="input-title release-man input-width3-1">卸货联系人</span>
+						<div class="t-c-input-select t-c-input-select-date ">
+							<input type="text" class="t-c-input input-width1" name="consigneelinkman" maxlength="30" />
+						</div>
+					</div>
+					<div class="input-line">
+						<span class="input-title input-width3-1">卸货地址</span>
+						<div class="t-c-input-select  t-c-input-select-date t-c-input-select-address">
+							<input type="text" class="t-c-input input-width1 proCitySelAll " id="toaddress" placeholder="选择/输入城市名称"  name="to"
+							/>
+							<label class="t-c-input-icon"></label>
+						</div>
+						<span class="input-title input-width3-1">详细地址</span>
+						<input type="text" class="t-c-input input-width1" placeholder="详细地址" name="todetail" maxlength="120" />
+					</div>
+
+				</div>
+				<!--收货人信息end-->
+				<!--运输信息-->
+				<div class="release-cont">
+					<h3 class="tips-h">运输信息</h3>
+					<div class="input-line">
+						<span class="input-title input-width3-1">货物名称</span>
+						<input type="text" class="t-c-input input-width2" id="goodsname" name="goodsname" maxlength="30"  />
+						<span class="input-title input-width3-1">重量(吨)</span>
+						<input type="text" class="t-c-input input-width2 input-number" data-max="1000" name="goodsweightmin" maxlength="8">
+						<span class="input-title input-width3-1">体积(方)</span>
+						<input type="text" class="t-c-input input-width2 input-number" data-max="1000" name="goodsvolumemin" maxlength="8">
+					</div>
+					<div class="input-line chargetype-line" style="display: none">
+						<span class="input-title" style="width:128px;">货物声明价值(万元)</span>
+						<div class="t-c-input-select  t-c-input-select-date ">
+							<input type="text" class="t-c-input input-width2  input-number" id="statementvalue" maxlength="4" name="statementvalue" />
+						</div>
+						<span style="width:105px;" class="input-title">货源有效期</span>
+						<div class="t-c-input-select" style="position:relative;">
+							<input type="text" class="t-c-input input-width2" id="invaliddateshow" >
+							<input type="hidden" name="invaliddate" id="invaliddate" value="">
+							<div class="pos-Select">
+								<select name="invaliddateH"></select>
+								<span>时</span>
+								<select name="invaliddateM"></select>
+								<span>分</span>
+								<a href="javascript:void(0)" class="true-btn-date">确定</a>
+							</div>
+						</div>
+					</div>
+					<div class="input-line">
+						<span class="input-title input-width3-1">车辆结构</span>
+						<div class="t-c-input-select">
+							<input type="text" class="t-c-input input-width2" init="true" />
+							<label class="t-c-input-icon"></label>
+							<ul class="input-option" style="display: none" name="cartype">
+							</ul>
+						</div>
+						<span class="input-title input-width3-1">车长(米)</span>
+						<div class="t-c-input-select t-c-input-select-date">
+							<input type="text" class="t-c-input input-width2 proCarSelAll input-number" data-max="50" data-reg="[^0-9\-\.]" id="carLength"
+							 placeholder="" name="carlength">
+							<label class="t-c-input-icon"></label>
+						</div>
+					</div>
+					<div class="input-line">
+						<span class="input-title input-width3-1">回单</span>
+						<div class="input-check ml10" name="addedservice1">
+							<span class="t-radio-tips">需要</span>
+						</div>
+						<!--<div class="input-check" name="addedservice2">
+							<span class="t-radio-tips">保险</span>
+						</div>
+						<div class="input-check" name="addedservice3">
+							<span class="t-radio-tips">开票</span>
+						</div>-->
+					</div>
+					<div class="input-line">
+						<span class="input-title input-width3-1">常用标签</span>
+						<ul class="normal-tips clearfix">
+							<li class="normal-tips-li">三不超</li>
+							<li class="normal-tips-li">非禁区</li>
+							<li class="normal-tips-li">需雨布</li>
+							<li class="normal-tips-li">有人押车</li>
+							<li class="normal-tips-li">往返货</li>
+							<li class="normal-tips-li">走高速</li>
+							<li class="normal-tips-li">送达时间</li>
+							<li class="normal-tips-li">司机装卸</li>
+						</ul>
+					</div>
+					<div class="input-line">
+						<span class="input-title input-width3-1">备注</span>
+						<textarea id="note" class="t-c-input release-remark" cols="30" rows="10" name="memo" maxlength="150"></textarea>
+					</div>
+
+				</div>
+				
+				<div class="release-cont cyr-info">
+					<h3 class="tips-h">承运人信息</h3>
+					<div class="input-line">
+						<div class="freightprice">
+							<input type="hidden" name="producttype" value="5" />
+							<span class="input-title input-width3-1">承运人</span>
+							<div class="t-c-input-select">
+								<input type="text" class="t-c-input input-width2"  id="cyr" />
+								<label class="t-c-input-icon"></label>
+								<ul class="input-option" style="display: none" name="dispatchagentid">
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<!--运输信息end-->
+				<div class="release-cont">
+					<h3 class="tips-h">费用信息</h3>
+					<div class="input-line">
+						<span class="input-title input-width3-1">应付运价(元)</span>
+						<input type="text" class="t-c-input input-width2" name="amount">
+					</div>
+					<div class="input-line">
+								<span  style="margin-top: 30px; margin-left: 105px;"  class="t-c-submit release-btn t-c-submit-disable" id="release">保存模版</span>
+								<img src="../../css/img/ajax-loader.gif" class="load">
+					</div>
+				</div>
+				<!--<div class="release-cont">
+					<h3 class="tips-h">其他信息</h3>
+					<div class="input-line">
+						<span class="input-title"></span>
+						<div class="input-check" name="addedservice1">
+							<span class="t-radio-tips">签单返回</span>
+						</div>
+						<div class="input-check" name="addedservice2">
+							<span class="t-radio-tips">保险</span>
+						</div>
+						<div class="input-check" name="addedservice3">
+							<span class="t-radio-tips">开票</span>
+						</div>
+					</div>
+					<div class="input-line">
+						<span class="input-title">常用标签</span>
+						<ul class="normal-tips clearfix">
+							<li class="normal-tips-li">需雨布</li>
+							<li class="normal-tips-li">三不超</li>
+							<li class="normal-tips-li">司机卸货</li>
+						</ul>
+					</div>
+					<div class="input-line">
+						<span class="input-title">备注</span>
+						<textarea id="note" class="t-c-input release-remark" cols="30" rows="10" name="memo" maxlength="150"></textarea>
+					</div>
+					<div class="input-line">
+						<span class="t-c-submit release-btn t-c-submit-disable" id="release">保存模版</span>
+						<img src="../../css/img/ajax-loader.gif" class="load">
+					</div>
+				</div>-->
+			</form>
+			<div class="release-success" style="display: none;" id="releasesuccess">
+				<div class="success-msg">
+					<span class="sub">恭喜您</span>
+					<span class="name">您的模板“<label name="name"></label>“添加成功！</span>
+				</div>
+				<div class="success-address">
+					<span class="address release-from">发货地 <label name="from"></label></span>
+					<span class="cross"></span>
+					<span class="address release-to">收货地 <label name="to"></label></span>
+				</div>
+				<div class="input-line">
+					<a class="t-c-submit " href="./goodsRelease.html">马上去发布信息</a>
+					<a class="t-c-sub-submit" href="./goodsModel.html">返回模板管理</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--页脚-->
+	<!--<div class="body-footer"></div>-->
+	<!-- js引入 -->
+	<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+	<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../js/weiget/getJson.js"></script>
+	<script type="text/javascript" src="../../js/weiget/base.js"></script>
+	<script type="text/javascript" src="../../js/weiget/placeholder.js"></script>
+	<script type="text/javascript" src="../../js/lib/template.js"></script>
+	<script type="text/javascript" src="../../js/weiget/ieMode.js"></script>
+	<script type="text/javascript" src="../../js/weiget/iLocalStorage.js"></script>
+	<script type="text/javascript" src="../../js/common/common.js"></script>
+	<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js"></script>
+	<script type="text/javascript" src="../../js/weiget/tradeFun.js"></script>
+	<!--<script type="text/javascript" src="../../js/common/tradeViewApi.js" ></script>-->
+	<script type="text/javascript" src="../../js/common/dispatchView.js"></script>
+	<script src="../../js/lib/laydate/laydate.js"></script>
+	<!--城市组件-->
+	<script type="text/javascript" src="../../js/weiget/area_yasuo.js"></script>
+	<script type="text/javascript" src="../../js/weiget/areadata-v2.0.js"></script>
+	<script type="text/javascript" src="../../js/weiget/area_plugin.js"></script>
+	<!--车长-->
+	<script type="text/javascript" src="../../js/weiget/carlen_plugin.js"></script>
+
+	<script type="text/javascript" src="../../js/page/trade/t-goodsModel.js"></script>
+</body>
+
+</html>

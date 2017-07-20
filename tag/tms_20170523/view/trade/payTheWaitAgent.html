@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+        <title>陆鲸供应链-待付款订单</title>
+		<!-- css引入 -->
+		<link rel="stylesheet" href="../../css/common/reset-min.css" />
+		<link rel="stylesheet" href="../../css/common/common.css"   />
+		<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css"   />
+		<!-- 业务中心-->
+		<link rel="stylesheet" href="../../css/page/trade/trade.css"  />
+	</head>
+	<body class="body-bg">
+		<!--头部-->
+		<div class="body-top"></div>
+		<!--主体-->
+		<div class="body-main">
+			<!--菜单-->
+			<div class="body-menu" id="tradeMenu"></div>
+			<!--内容-->
+			<div class="body-content">
+                <div class="t-c-title">
+					<span class="t-h2">待付款订单</span>
+				</div>
+				<div class="modal-cont">
+					<form action="" id="searchForm" accept-charset="utf-8">
+						<input type="hidden" name="paystatus" value="5">
+						<input type="hidden" name="status" value="50">
+						<div class="input-line goods-input-line">
+
+							<span class="input-title release-man" >下单时间</span>
+							<div class="t-c-input-select t-c-input-select-date">
+								<input type="text" class="t-c-input input-width7" placeholder="" name="inputdatestart" id="starttime" >
+								<label class="t-c-input-icon"></label>
+							</div>
+							<span class="hen">—</span>
+							<div class="t-c-input-select t-c-input-select-date" style="margin-left:0;">
+								<input type="text" class="t-c-input input-width7" placeholder="" name="inputdateend" id="endtime" >
+								<label class="t-c-input-icon"></label>
+							</div>
+							<span class="input-title release-man">订单编号</span>
+							<input type="text" class="t-c-input input-width2"  id="ordercode"   name="ordercode" maxlength="30"/>
+
+							<span class="input-title release-man">司机姓名</span>
+							<input type="text" class="t-c-input input-width2"   name="driverrealname" maxlength="30"/>
+							
+						</div>
+						<div class="input-line goods-input-line">
+							<span class="input-title release-man" >对账时间</span>
+							<div class="t-c-input-select t-c-input-select-date">
+								<input type="text" class="t-c-input input-width7" placeholder="" name="checkdatestart" id="starttime1" >
+								<label class="t-c-input-icon"></label>
+							</div>
+							<span class="hen">—</span>
+							<div class="t-c-input-select t-c-input-select-date" style="margin-left:0;">
+								<input type="text" class="t-c-input input-width7" placeholder="" name="checkdateend" id="endtime1" >
+								<label class="t-c-input-icon"></label>
+							</div>
+							<!-- <span style="display:none" class="input-title">运单状态</span>
+							<div style="display:none" class="t-c-input-select">
+								<input type="text" class="t-c-input input-width2" placeholder="" />
+								<label class="t-c-input-icon"></label>
+								<ul class="input-option" style="display: none"  name="ownerpaystatus">
+									<li data-value="5">待付款</li>
+								</ul>
+							</div> -->
+							<span class="input-title" style="margin-left:25px;">装卸货地址</span>
+							<div class="t-c-input-select t-c-input-select-date">
+								<input type="text" class="t-c-input input-width6 proCitySelAll" id="fromaddress" placeholder="" name="fromaddress" />
+								<label class="t-c-input-icon"></label>
+							</div>
+							<span class="hen">—</span>
+							<div class="t-c-input-select t-c-input-select-date" style="margin-left:0;">
+								<input type="text" class="t-c-input input-width6 proCitySelAll" id="toaddress" placeholder="" name="toaddress" />
+								<label class="t-c-input-icon"></label>
+							</div>
+						</div>
+						<div class="input-line goods-input-line">
+							<span class="t-c-submit history-s-btn" id="searchAllPay" style="margin-left:20px;">在线支付</span>
+							<span class="t-c-submit history-s-btn" id="searchPayOffline" style="margin-left:20px;">线下付款</span>
+							<span class="t-c-submit history-s-btn" id="searchPay" style="margin-left:60px;">充值</span>
+							<span class="t-c-submit history-s-btn" id="searchSubmit" style="margin-left:20px;">查询</span>
+							<span class="t-c-submit history-s-btn" id="searchExcel" style="margin-left:20px;">导出</span>
+							<span class="t-c-submit history-s-btn" id="searchReset" style="margin-left:10px;">重置</span>
+						</div>
+					</form>
+					<div class="pagination paginationUp"></div>
+					<div id="unPay"></div>
+					<table class="t-table" width="946" cellpadding="1" cellspacing="1" >
+						<thead>
+							<tr>
+								<th style="width:20px;">
+									<input type="checkbox" class="all-check">
+								</th>
+								<th style="width:65px;">订单编号</th>
+								<th style="width:105px;">司机信息</th>
+								<th style="width:80px;">运输路线</th>
+								<th style="width:140px;">货物信息</th>
+								<th style="width:140px;">费用信息</th>
+								<th style="width:90px;">卸货时间</th>
+								<th style="width:90px;">对账时间</th>
+								<th style="width:80px;">操作</th>
+							</tr>
+						</thead>
+						<tbody id="ajaxCont">
+						</tbody>
+					</table>
+					
+					<div id="Pagination" class="pagination">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--页脚-->
+		<!--<div class="body-footer"></div>-->
+		<!-- js引入 -->
+		<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+		<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/getJson.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/base.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/placeholder.js" ></script>
+		<script type="text/javascript" src="../../js/lib/template.js"></script>
+		<script type="text/javascript" src="../../js/weiget/ieMode.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/iLocalStorage.js" ></script>
+		<script type="text/javascript" src="../../js/common/common.js"></script>
+		<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js" ></script>
+		<script src="../../js/lib/jquery.pagination.js"></script>
+		<script type="text/javascript" src="../../js/common/tradeViewApi.js" ></script>
+		<script type="text/javascript" src="../../js/common/dispatchView.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/tradeFun.js" ></script>
+		<script src="../../js/lib/laydate/laydate.js"></script>
+		<!--城市组件-->
+		<script type="text/javascript" src="../../js/weiget/area_yasuo.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/areadata-v2.0.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/area_plugin.js" ></script>
+		<!--车长-->
+		<script type="text/javascript" src="../../js/weiget/carlen_plugin.js" ></script>
+		<script type="text/javascript" src="../../js/page/trade/t-payTheWaitAgent.js" ></script>
+		<div class="pop-cl" style=""></div>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+        <title>陆鲸供应链-发布货源-批量下单</title>
+		<!-- css引入 -->
+		<link rel="stylesheet" href="../../css/common/reset-min.css" />
+		<link rel="stylesheet" href="../../css/common/common.css"   />
+		<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css"   />
+		<!-- 业务中心-->
+		<link rel="stylesheet" href="../../css/page/trade/trade.css"  />
+	</head>
+	<body class="body-bg">
+		<!--头部-->
+		<div class="body-top"></div>
+		<!--主体-->
+		<div class="body-main">
+			<!--菜单-->
+			<div class="body-menu" id="tradeMenu"></div>
+			<!--内容-->
+			<div class="body-content">
+
+                <div class="t-c-title" style="border: none;">
+					<span class="t-h2" id="goodsTitle">发布货源</span>
+				</div>
+				<div class="release-cont clearfix" style="margin:0px;padding:0px;">
+					<a  class="bulk-order bulk-1 " href="./goodsRelease.html">单件下单</a>
+					<a class="bulk-order bulk-2" href="./goodsRelease-batch.html?type=pai">批量下单</a>
+					<!-- <a class="bulk-order bulk-3" href="./goodsRelease-batch.html?type=jin">批量下单(竞价)</a> -->
+				</div>
+					<form action=""  id="excel-up"  method="post" enctype="multipart/form-data">
+						<div class="upload clearfix" style="margin:10px 0 10px 20px;float:left;">
+							<a href="javascript:;" class="a-upload" style="background: #0a8ef0 url('../../css/img/upload.png') 10px center no-repeat;">
+								<input type="file" name="excel" id="upload-excel">点击批量导入货源
+							</a>
+							<div class="showFileName"></div>
+						</div>
+						<input type="hidden" name="bidtype" value="0">
+						<a href="javascript:;" style="margin:10px 0 10px 20px;float:left;background: #65e26a url('../../css/img/download.png') 10px center no-repeat;" class="a-upload downexcel">点击下载货源模版</a>
+					</form>
+				<div class="input-line way-line">
+					<a href="javascript:void(0)" class="excel-btn change-excel" style="margin-left:20px;">修改</a>
+					<a href="javascript:void(0)" class="excel-btn delete-excel">删除</a>
+					<a href="javascript:void(0)" class="excel-btn submit-excel">提交</a>
+					<img src="../../css/img/ajax-loader.gif" class="load">
+				</div>
+				<div class="modal-cont">
+					<table class="t-table" width="946" cellpadding="0" cellspacing="0" >
+						<thead>
+						<tr>
+							<th style="width:20px;">
+								<input type="checkbox" class="all-check">
+							</th>
+							<th style="width: 100px;">发货人</th>
+							<th style="width: 120px;">联系人电话</th>
+							<th style="width: 120px;">省市区</th>
+							<th style="width: 80px;">详细地址</th>
+							<th style="width: 80px;">收货人</th>
+							<th style="width: 150px;">联系人电话</th>
+							<th style="width: 150px;">省市区</th>
+							<th style="width: 150px;">详细地址</th>
+						</tr>
+						</thead>
+						<tbody  id="ajaxCont">
+						</tbody>
+					</table>
+
+					<div id="Pagination" class="pagination"></div>
+
+					<div class="no-model" style="display:none;">
+						<label class="no-model-icon"><img class="icon" src="../../css/img/t-no-model-icon.png" alt=""></label>亲！您还没有设定模板，快去<a href="./goodsModel-add.html?type=add">添加模板</a>吧！
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!--页脚-->
+		<!--<div class="body-footer"></div>-->
+		<!-- js引入 -->
+		<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+		<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/getJson.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/base.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/placeholder.js" ></script>
+		<script type="text/javascript" src="../../js/lib/template.js"></script>
+		<script type="text/javascript" src="../../js/weiget/ieMode.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/iLocalStorage.js" ></script>
+		<script type="text/javascript" src="../../js/common/common.js"></script>
+		<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js" ></script>
+		<!--<script type="text/javascript" src="../../js/common/tradeViewApi.js" ></script>-->
+		<script type="text/javascript" src="../../js/common/dispatchView.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/tradeFun.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/form.js" ></script>
+		<script src="../../js/lib/laydate/laydate.js"></script>
+		<!--城市组件-->
+		<script type="text/javascript" src="../../js/weiget/area_yasuo.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/areadata-v2.0.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/area_plugin.js" ></script>
+		<!--车长-->
+		<script type="text/javascript" src="../../js/weiget/carlen_plugin.js" ></script>
+		<script src="../../js/lib/jquery.pagination.js"></script>
+		<!--当前页面-->
+		<script type="text/javascript" src="../../js/page/trade/t-goodsRelease-batch.js" ></script>
+
+	</body>
+</html>

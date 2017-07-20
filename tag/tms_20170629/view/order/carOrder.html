@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+        <title>陆鲸-派车单列表</title>
+		<!-- css引入 -->
+		<link rel="stylesheet" href="../../css/common/reset-min.css" />
+		<link rel="stylesheet" href="../../css/common/common.css"   />
+		<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css"   />
+		<!-- 业务中心-->
+		<link rel="stylesheet" href="../../css/page/trade/trade.css"  />
+	</head>
+	<body class="body-bg">
+		<!--头部-->
+		<div class="body-top"></div>
+		<!--主体-->
+		<div class="body-main">
+			<!--菜单-->
+			<div class="body-menu" id="tradeMenu"></div>
+			<!--内容-->
+			<div class="body-content">
+				<div class="t-sub-title" id="t-sub-title">
+					<a href="./carOrder.html?type=carOrderAgent&status=all" status="all" class="title"  title="全部" >全部</a>
+					<a href="./carOrder.html?type=carOrderAgent&status=doing" status="doing" class="title"   title="在途中">在途中</a>
+					<a href="./carOrder.html?type=carOrderAgent&status=arrive" status="arrive" class="title"   title="已到达">已到达</a>
+				</div>
+				<div class="modal-cont">
+					<form action="" id="searchForm">
+						
+						<div class="input-line goods-input-line">
+							<span class="input-title">派车单号</span>
+							<input type="text" class="t-c-input input-width2" placeholder="" name="shipbillcode" />
+							<span class="input-title">订单编号</span>
+							<input type="text" class="t-c-input input-width1" placeholder="" id="orderId"  name="ordercode" />
+						</div>
+						<div class="input-line goods-input-line">
+							
+							<span class="input-title">司机姓名</span>
+							<input type="text" class="t-c-input input-width3" placeholder=""  name="driverrealname" />
+							<span class="input-title">车牌号</span>
+							<input type="text" class="t-c-input input-width3" placeholder=""  name="carplatenumber" />
+							<span class="input-title">手机号</span>
+							<input type="text" class="t-c-input input-width3" placeholder=""  name="drivermobilenumber" />
+							&nbsp;&nbsp;<span class="t-c-submit history-s-btn"  id="searchSubmit">查询</span>
+							&nbsp;&nbsp;<span class="t-c-submit history-s-btn" id="searchReset">重置</span>
+						</div>
+					</form>
+					<div class="pagination paginationUp"></div>
+					<table class="t-table" width="946" cellpadding="0" cellspacing="0" >
+						<thead>
+							<tr>
+								<th style="width:80px;">派车单号</th>
+								<th style="width:120px;">订单号</th>
+								<th style="width:120px;">运输路线</th>
+								<th style="width:120px;">货物信息</th>
+								<th style="width:150px;">费用信息</th>
+								<th style="width:120px;">司机信息</th>
+								<th style="width:110px;">节点跟踪</th>
+								<th style="width:120px;" >操作</th>
+
+							</tr>
+						</thead>
+						<tbody  id="ajaxCont">
+
+						</tbody>
+					</table>
+
+					<div id="Pagination" class="pagination">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--页脚-->
+		<div class="body-footer"></div>
+
+		<!-- 基础js引入 -->
+		<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+		<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/getJson.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/base.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/placeholder.js" ></script>
+		<script type="text/javascript" src="../../js/lib/template.js"></script>
+		<script type="text/javascript" src="../../js/weiget/ieMode.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/iLocalStorage.js" ></script>
+		<script type="text/javascript" src="../../js/common/common.js" ></script>
+		<script src="../../js/lib/jquery.pagination.js"></script>
+		<!--<script type="text/javascript" src="../../js/common/tradeViewApi.js" ></script>-->
+		<script type="text/javascript" src="../../js/common/dispatchView.js" ></script>
+		<script type="text/javascript" src="../../js/weiget/tradeFun.js" ></script>
+		<!-- 基础js引入结束 -->
+
+		<!--页面js-->
+		<script type="text/javascript" src="../../js/page/order/carOrder.js" ></script>
+
+	</body>
+</html>

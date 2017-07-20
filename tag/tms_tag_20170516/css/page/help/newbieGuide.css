@@ -1,0 +1,156 @@
+@charset "utf-8";
+.body-menu p {
+	background-image: none;
+}
+.body-menu p:hover{
+  	background-image: none;
+  	color: #252525;
+}
+.crumbs {
+	font-size: 16px;
+	color: #252525;
+	height: 46px;
+	line-height: 46px;
+	border-bottom: 1px solid #dfdfdf;
+	padding: 0 27px;
+}
+
+/*freAskedQuestion*/
+.main {
+	padding: 31px 30px 0px;
+}
+.question-answer {
+	margin-bottom: 20px;
+	font-family: MicrosoftYaHei-Bold;
+}
+.question {
+	color: #0b8ef0;
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+.answer {
+	margin: 0 12px 0 6px;
+	width: 892px;
+	padding: 17px 5px 29px 20px;
+	background: #f8f9fb;
+	color: #8B8C8C;
+}
+
+/*giveCord*/
+.box {
+	color: #666666;
+	padding: 39px 22px;
+}
+.textBox {
+	text-align: left;
+	margin-top: 27px;
+}
+.title {
+	color: #0b8ef0;
+	font-size: 14px;
+}
+
+/*regProcess*/
+.regProBackground {
+	width: 950px;
+	height: 183px;
+	background: #f3f4f6;
+	margin-top: 25px;
+	margin-left: 22px;
+	position: relative;
+	margin-bottom: 12px;
+}
+.regPicOne {
+	margin-top: 36px;
+	margin-left: 206px;
+	width: 35px;
+	height: 40px;
+}
+.regPicTwo {
+	margin-top: 37px;
+	margin-left: 200px;
+	width: 37px;
+	height: 40px;
+}
+.regPicThree {
+	margin-top: 32px;
+	margin-left: 196px;
+	width: 43px;
+	height: 43px;
+}
+.regCircle{
+	position: absolute;
+	top: 107px;
+	width: 21px;
+	height: 21px;
+	z-index: 10;
+}
+.r-one{
+	left: 210px;
+}
+.r-two{
+	left: 452px;
+}
+.r-three{
+	left: 694px;
+}
+.regCircleLineOne {
+	position: absolute;
+	left: 229px;
+	top: 116px;
+	width: 224px;
+	height: 3px;
+}
+.regCircleLineTwo {
+	position: absolute;
+	left: 471px;
+	top: 116px;
+	width: 224px;
+	height: 3px;
+}
+.regText {
+	position: absolute;
+	left: 199px;
+	top: 131px;
+	font-size: 16px;
+	color: #252525;
+	text-align: left;
+}
+.regTextOne {
+	margin-right: 172px;
+}
+.regTextTwo {
+	margin-right: 172px;
+}
+.regProText {
+	color: #8D8D8D;
+}
+
+/*会员认证*/
+.confirm {
+	padding-top: 28px;
+}
+.confirm .textBox {
+	margin-top: 13px;
+}
+.conInfo {
+	margin-top: 24px;
+}
+.confirmType {
+	margin-top: 8px;
+}
+.confirmType .icon {
+	float: left;
+	margin-right: 6px;
+	margin-top: 3px;
+}
+.confirmText {
+	display: inline-block;
+	width: 897px;
+}
+.contitle {
+	color: #272727;
+}
+.conInfo .conBox {
+	margin: 0px;
+}

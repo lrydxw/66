@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="no-cache" http-equiv="pragma">
+	<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+	<title>陆鲸供应链-运力管理-我的物流商</title>
+	<!-- css引入 -->
+	<link rel="stylesheet" href="../../css/common/reset-min.css" />
+	<link rel="stylesheet" href="../../css/common/common.css" />
+	<!-- 业务中心-->
+	<link rel="stylesheet" href="../../css/page/trade/trade.css" />
+	<link rel="stylesheet" href="../../css/common/tf-pop-sp-pc.css" />
+</head>
+
+<body class="body-bg">
+	<!--头部-->
+	<div class="body-top"></div>
+	<!--主体-->
+	<div class="body-main">
+		<!--菜单-->
+		<div class="body-menu" id="tradeMenu"></div>
+		<!--内容-->
+		<div class="body-content">
+			<div class="t-c-title">
+				<span class="t-h2">我的承运商</span>
+			</div>
+			<div class="modal-cont">
+				<form action="" id="searchForm">
+					<div class="input-line goods-input-line">
+						<span class="input-title" style="width:180px;">物流商名称\联系人\电话</span>
+						<input type="text" class="t-c-input input-width1" id="keywords" placeholder="" name="keywords" />
+						<span class="t-c-submit history-s-btn" id="searchSubmit">查询</span>
+						<span class="t-c-submit history-s-btn" id="addAgent">添加承运商</span>
+					</div>
+				</form>
+					<div class="pagination paginationUp"></div>
+				<table class="t-table" width="946" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th style="width:240px;">物流商名称</th>
+							<th style="width:260px;">联系人</th>
+							<th style="width:260px;">电话</th>
+							<!--<th style="width:288px;">添加时间</th>-->
+							<th style="width:188px;">操作</th>
+						</tr>
+					</thead>
+					<tbody id="ajaxCont">
+
+					</tbody>
+				</table>
+				<div id="Pagination" class="pagination">
+				</div>
+				<div id="popup2" class="popup" style="width: 680px; max-height: 700px; overflow: scroll;">
+					<div class="popup-head">
+						<h3>添加承运商</h3>
+						<a href="javascript:void(0)" class="close_btn clearInfo"></a>
+					</div>
+					<form action="" id="agentFrom" style="margin-top:20px;">
+						<div class="release-cont">
+							<div class="input-line">
+								<span class="input-title release-man-number input-width3-1">企业/个人名</span>
+								<input type="text" class="t-c-input input-width2" name="keywords2" />
+								<span class="t-c-submit history-s-btn  release-man-number" style="margin-left: 105px;" id="searchAgent">搜索</span>
+							</div>
+
+							<table class="t-table" style="width:95%; margin:20px auto" cellpadding="0" cellspacing="0">
+								<thead>
+									<tr>
+										<th style="width:210px;">企业/个人名</th>
+										<th style="width:220px;">手机号</th>
+										<th style="width:200px;">操作</th>
+									</tr>
+								</thead>
+								<tbody id="ajaxCont2">
+
+								</tbody>
+							</table>
+							<div id="Pagination2" class="pagination"></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--页脚-->
+	<div class="body-footer"></div>
+	<!-- js引入 -->
+	<!--[if lt IE 8 ]><script src="../../js/weiget/json2.js"></script><![endif]-->
+	<script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../js/weiget/getJson.js"></script>
+	<script type="text/javascript" src="../../js/weiget/base.js"></script>
+	<script type="text/javascript" src="../../js/weiget/placeholder.js"></script>
+	<script type="text/javascript" src="../../js/lib/template.js"></script>
+	<script type="text/javascript" src="../../js/weiget/ieMode.js"></script>
+	<script type="text/javascript" src="../../js/weiget/iLocalStorage.js"></script>
+	<script type="text/javascript" src="../../js/common/common.js"></script>
+	<script src="../../js/lib/jquery.pagination.js"></script>
+	<!--<script type="text/javascript" src="../../js/common/tradeViewApi.js" ></script>-->
+	<script type="text/javascript" src="../../js/common/dispatchView.js"></script>
+	<script type="text/javascript" src="../../js/weiget/tradeFun.js"></script>
+	<script type="text/javascript" src="../../js/weiget/formCheck.js"></script>
+	<script type="text/javascript" src="../../js/weiget/tf-popup-sp-pc.js"></script>
+	<!--城市组件-->
+
+	<script type="text/javascript" src="../../js/weiget/area_yasuo.js"></script>
+	<script type="text/javascript" src="../../js/weiget/areadata-v2.0.js"></script>
+	<script type="text/javascript" src="../../js/weiget/area_plugin.js"></script>
+	<script type="text/javascript" src="../../js/weiget/carlen_plugin.js"></script>
+	<!--车长-->
+	<script type="text/javascript" src="../../js/weiget/carlen_plugin.js"></script>
+
+	<script type="text/javascript" src="../../js/page/driver/d-driverProviders.js"></script>
+
+</body>
+
+</html>
